@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+/* КОНТЕЙНЕР */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* META */
+.logo {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  animation: fadeIn 1s ease;
+}
+
+/* INPUT */
+.input {
+  width: 100%;
+  max-width: 360px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  background-color: #1c1c1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  transition: border-color 0.3s, background-color 0.3s;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1877f2;
+  background-color: #2c2c2e;
+}
+
+/* ВОЙТИ */
+.login-button {
+  width: 100%;
+  max-width: 360px;
+  padding: 14px;
+  background-color: #3a3a3c;
+  border: none;
+  border-radius: 8px;
+  color: #aaa;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: not-allowed;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login-button.enabled {
+  background-color: #1877f2;
+  color: white;
+  cursor: pointer;
+}
+
+/* Унуттуңбу сыр сөз? */
+.forgot-password {
+  color: #aaa;
+  margin-top: 14px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgot-password:hover {
+  color: #ddd;
+}
+
+/* АККАУНТ ТҮЗҮҮ */
+.create-account-button {
+  width: 100%;
+  max-width: 360px;
+  padding: 14px;
+  background-color: transparent;
+  border: 1px solid #1877f2;
+  border-radius: 25px;
+  color: #1877f2;
+  font-size: 14px;
+  margin-top: 60px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.create-account-button:hover {
+  background-color: #1877f2;
+  color: white;
+}
+
+/* АНИМАЦИЯ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ АДАПТИВДҮҮЛҮК (iPhone жана Redmi үчүн) */
+@media screen and (max-width: 414px) {
+  .container {
+    padding: 30px 16px;
+  }
+
+  .input,
+  .login-button,
+  .create-account-button {
+    max-width: 100%;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
