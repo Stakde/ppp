@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Hero.css";
+import axios from "axios";
 
 const Hero = () => {
   const [username, setUsername] = useState("");
